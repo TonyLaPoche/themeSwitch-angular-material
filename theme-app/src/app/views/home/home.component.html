@@ -1,1 +1,32 @@
-<p>Hello</p>
+<mat-card class="exemple-card">
+    <mat-card-title>
+        <h2 class="example-h2">Slider test</h2>
+    </mat-card-title>
+    <mat-card-content>
+        <section class="example-section">
+            <label>Color:</label>
+            <mat-radio-group [(ngModel)]="color">
+                <mat-radio-button class="example-margin" value="primary" color="primary">
+                    Primary
+                </mat-radio-button>
+                <mat-radio-button class="example-margin" value="accent" color="accent">
+                    Accent
+                </mat-radio-button>
+                <mat-radio-button class="example-margin" value="warn" color="warn">
+                    Warn
+                </mat-radio-button>
+            </mat-radio-group>
+        </section>
+        <h2 class="example-h2">Set theme</h2>
+
+        <section class="example-section">
+            <mat-slide-toggle
+                    (change)="isSwitched($event)"
+                    [color]="color"
+                    class="example-margin">
+                Slide me!
+            </mat-slide-toggle
+            >
+        </section>
+    </mat-card-content>
+</mat-card>
