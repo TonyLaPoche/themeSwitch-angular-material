@@ -14,7 +14,6 @@ import {AsyncPipe} from "@angular/common";
 export class HeaderComponent {
   themeService: ThemesService = inject(ThemesService);
   toggleTheme(theme: Theme) {
-    console.log('curent theme is : ',theme)
     this.themeService.switchTheme(theme === 'light' ? 'dark' : 'light');
   }
 }
