@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  @if (themeService.theme$ | async; as theme) {
+    <button mat-icon-button (click)="toggleTheme(theme)">
+      @if (theme === 'light') {
+      <mat-icon >light_mode</mat-icon>
+        } @else {
+        <mat-icon >dark_mode</mat-icon>
+      }
+    </button>
+  }
+</mat-toolbar>

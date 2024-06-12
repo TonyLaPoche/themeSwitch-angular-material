@@ -1,0 +1,21 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: inherit;
+}
+
+.list {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  font-style: italic;
+  flex-grow: 1;
+}

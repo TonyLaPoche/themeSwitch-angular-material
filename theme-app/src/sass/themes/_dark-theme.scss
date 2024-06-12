@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+@use './brand-palette';
+@use "./utils";
+
+@include mat.core();
+
+$theme-color-config: (
+  primary: mat.define-palette(brand-palette.$brand-brown-palette, 700, 400, 900),
+  accent: mat.define-palette(brand-palette.$brand-green-palette, 700, 400, 900),
+);
+
+$brand-theme: mat.define-dark-theme(utils.with-core-config($theme-color-config));
+
+html {
+  @include mat.all-component-themes($brand-theme)
+}

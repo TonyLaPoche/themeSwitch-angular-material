@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+@function with-core-config($color-config) {
+  @return (
+    color: $color-config,
+    typography: mat.define-typography-config(
+      $font-family: 'Roboto',
+    ),
+    density: 0
+  )
+}
+
+@function patch-color-config($theme, $colors-to-patch: ()) {
+  @return map.deep-merge($theme, (
+    color: $colors-to-patch
+  ))
+}
