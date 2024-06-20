@@ -1,6 +1,6 @@
 <mat-card class="exemple-card">
     <mat-card-title>
-        <h2 class="example-h2">Slider test</h2>
+        <h2 class="example-h2">Slider THEME</h2>
     </mat-card-title>
     <mat-card-content>
         <section class="example-section">
@@ -17,14 +17,15 @@
                 </mat-radio-button>
             </mat-radio-group>
         </section>
-        <h2 class="example-h2">Set theme</h2>
+        <h2 class="example-h2">Check color</h2>
 
         <section class="example-section">
             <mat-slide-toggle
-                    (change)="isSwitched($event)"
                     [color]="color"
                     class="example-margin">
-                Slide me!
+                @if (themeService.theme$ | async; as theme) {
+                Theme is {{ theme }} with color : {{ color }}
+                }
             </mat-slide-toggle
             >
         </section>
